@@ -3,15 +3,11 @@ import styles from './App.module.css';
 import { useState, useEffect } from 'react';
 
 function Hello(){
-  function destroyedFn(){
-    console.log("Bye!");
-  }
-  function effectFn(){
-    console.log("created")
-    return destroyedFn; //component가 파괴될 때, return한 function 실행
-  }
   
-  useEffect(effectFn,[]);
+  useEffect(()=>{
+    console.log("Hi");
+    return ()=>console.log("Bye");
+  },[]);
     
   return <h1>Hello</h1>
 }
