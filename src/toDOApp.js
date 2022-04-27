@@ -1,5 +1,3 @@
-import Button from './Button';
-import styles from './App.module.css';
 import { useState, useEffect } from 'react';
 
 function App() {
@@ -31,7 +29,7 @@ function App() {
       </form>
       <hr />
       <ul>
-        {toDos.map((item,index) => (
+        {toDos.map((item, index) => (
           <li key={index}>{item}</li>
         ))}
       </ul>
