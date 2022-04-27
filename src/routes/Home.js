@@ -25,6 +25,7 @@ function Home() {
           {movies.map((movie) => (
             <Movie
               key={movie.id} //key는 리액트에서만 map 안에서 컴포넌트를 랜더할 때 사용
+              id={movie.id}
               coverImage={movie.medium_cover_image}
               title={movie.title}
               summary={movie.summary}
