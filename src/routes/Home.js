@@ -1,6 +1,6 @@
 //App Component 전체를 가지고 있음
 import { useEffect, useState } from 'react';
-import Movie from './components/Movie.js';
+import Movie from '../components/Movie.js';
 
 function Home() {
   const [loading, setLoading] = useState(true);

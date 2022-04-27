@@ -1,10 +1,13 @@
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom'; //브라우저 새로고침없이 다른 페이지로 넘어가게 해줌
 
 function Movie({ coverImage, title, summary, genres }) {
   return (
     <div>
       <img src={coverImage} alt={title} />
-      <h2>{title}</h2>
+      <h2>
+        <Link to="/movie">{title}</Link>
+      </h2>
       <p>{summary}</p>
       <ul>
         {genres.map((g) => (
